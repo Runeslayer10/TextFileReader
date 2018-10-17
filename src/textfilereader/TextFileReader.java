@@ -6,6 +6,7 @@
 
 package textfilereader;
 import java.io.*;
+import javax.swing.*;
 /**
  *
  * @author blhad3491
@@ -15,8 +16,17 @@ public class TextFileReader {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws IOException {
+        String fileName;
+        fileName = JOptionPane.showInputDialog("Please enter a file name: ");
+        BufferedReader readFile = new BufferedReader(new FileReader("y:/" + fileName));
+        String line = "";
+        String output = "";
+        while((line = readFile.readLine()) != null){//EOF
+            System.out.println(line);
+        }
     }
-    
 }
+    
+    
+
