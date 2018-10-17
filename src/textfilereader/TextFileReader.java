@@ -22,7 +22,7 @@ public class TextFileReader {
         BufferedReader readFile = new BufferedReader(new FileReader("y:/" + fileName));
         String line = "";
         String output = "";
-        while((line = readFile.readLine()) != null){//EOF
+        while((line = readFile.readLine()) != null){//End of File
             System.out.println(line);
         }
     }
